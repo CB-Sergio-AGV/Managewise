@@ -1,0 +1,227 @@
+/* =========================================
+   LAYOUT GENERAL
+========================================= */
+.dashboard-wrapper {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    background-color: #f1f5f9;
+    overflow: hidden;
+}
+
+.dashboard-sidebar {
+    width: 280px;
+    min-width: 280px;
+    background-color: #0f172a;
+    padding: 3rem 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.brand { 
+    font-size: 2.2rem; 
+    font-weight: 900; 
+    color: #f97316; 
+    text-align: center; 
+    margin-bottom: 4rem; 
+    letter-spacing: -1px;
+}
+
+.nav-links { flex: 1; }
+
+.nav-item {
+    padding: 1.5rem 2.5rem; font-weight: 700; font-size: 1.1rem;
+    color: #94a3b8; cursor: pointer; display: flex; align-items: center; gap: 20px; transition: all 0.3s;
+}
+
+.nav-item:hover { color: white; background: rgba(255, 255, 255, 0.05); }
+.nav-item.active { color: white; background: rgba(249, 115, 22, 0.1); border-right: 6px solid #f97316; }
+
+/* BOTÓN DE IA EN EL SIDEBAR (INTEGRADO) */
+.ai-nav-item { align-items: center; }
+.ai-nav-item:hover .pro-text { color: white; }
+.ai-text { display: flex; flex-direction: column; line-height: 1.2; font-size: 1.1rem; }
+.pro-text { margin-left: auto; font-size: 0.9rem; font-weight: 800; color: #94a3b8; transition: color 0.3s; }
+
+.dashboard-content {
+    flex: 1;
+    overflow-y: auto;
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.backlog-inner {
+    width: 100%;
+    max-width: 1200px;
+}
+
+/* =========================================
+   CABECERA BACKLOG & BOTONES PRINCIPALES
+========================================= */
+.backlog-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3rem;
+}
+
+.backlog-header h1 { font-size: 3.5rem; color: #0f172a; font-weight: 900; margin: 0; }
+.backlog-header p { font-size: 1.2rem; color: #64748b; margin-top: 10px; }
+
+.action-buttons { display: flex; gap: 1.5rem; align-items: center; }
+
+.p-button-orange { background-color: #f97316 !important; border: 2px solid #f97316 !important; font-weight: 800 !important; color: white !important; }
+.btn-sprint { background-color: transparent !important; color: #f97316 !important; border: 2px solid #f97316 !important; font-weight: 800 !important; }
+.btn-sprint:hover { background-color: rgba(249, 115, 22, 0.1) !important; }
+.btn-epic { background-color: #1e293b !important; color: white !important; border: 2px solid #1e293b !important; font-weight: 800 !important; }
+.btn-epic:hover { background-color: #334155 !important; border-color: #334155 !important; }
+
+/* =========================================
+   BLOQUES DE SPRINT
+========================================= */
+.sprints-container { margin-bottom: 4rem; }
+.sprint-block { background-color: #e2e8f0; border-radius: 12px; padding: 1.5rem; margin-bottom: 2rem; border: 1px solid #cbd5e1; }
+.sprint-header { display: flex; justify-content: space-between; align-items: center; padding-bottom: 1.5rem; }
+.sprint-title-group { display: flex; align-items: center; gap: 15px; }
+.sprint-title-group h2 { margin: 0; font-size: 1.4rem; color: #0f172a; font-weight: 800; }
+.sprint-dates { color: #64748b; font-size: 0.9rem; font-weight: 600; }
+.btn-complete-sprint { background-color: #0f172a !important; color: white !important; border: none !important; font-weight: 800 !important; padding: 0.7rem 1.5rem !important; border-radius: 8px !important; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+.btn-complete-sprint:hover { background-color: #1e293b !important; transform: translateY(-2px); }
+
+/* =========================================
+   BACKLOG GENERAL
+========================================= */
+.backlog-container { background-color: white; border-radius: 12px; padding: 1.5rem; box-shadow: 0 4px 15px rgba(0,0,0,0.03); border: 1px solid #f1f5f9; }
+.backlog-header-bar { display: flex; align-items: center; gap: 15px; margin-bottom: 1.5rem; padding-bottom: 1rem; border-bottom: 2px solid #f1f5f9; }
+.backlog-header-bar h2 { margin: 0; font-size: 1.4rem; color: #0f172a; font-weight: 800; }
+.story-count { background: #f1f5f9; padding: 4px 10px; border-radius: 20px; font-size: 0.85rem; font-weight: bold; color: #64748b; }
+
+/* =========================================
+   TARJETAS Y DRAG & DROP
+========================================= */
+.story-list { display: flex; flex-direction: column; gap: 10px; }
+.story-card { background-color: white; border: 1px solid #e2e8f0; border-radius: 8px; padding: 1rem 1.5rem; display: flex; justify-content: space-between; align-items: center; transition: all 0.2s; box-shadow: 0 1px 3px rgba(0,0,0,0.05); position: relative; }
+.story-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.08); border-color: #cbd5e1; }
+
+.draggable { cursor: grab; }
+.draggable:active { cursor: grabbing; opacity: 0.8; box-shadow: 0 8px 20px rgba(0,0,0,0.15); }
+.drop-zone { min-height: 150px; transition: background-color 0.2s, border-color 0.2s; }
+.drop-zone:hover { background-color: rgba(249, 115, 22, 0.05); border-color: #f97316; }
+
+.empty-drop-msg { text-align: center; color: #94a3b8; padding: 3rem 2rem; border: 3px dashed #cbd5e1; border-radius: 8px; margin: 0; font-weight: 600; }
+
+.story-main { display: flex; align-items: center; gap: 20px; }
+.story-id { font-weight: 800; color: #64748b; font-size: 0.95rem; width: 70px; }
+.story-title { font-size: 1.1rem; color: #1e293b; font-weight: 700; }
+.epic-tag { font-size: 0.75rem !important; padding: 4px 10px !important; font-weight: 800 !important; }
+
+.story-meta { display: flex; align-items: center; gap: 15px; }
+.story-points { background-color: #f1f5f9; color: #0f172a; font-weight: 900; width: 35px; height: 35px; display: flex; justify-content: center; align-items: center; border-radius: 50%; font-size: 1rem; border: 2px solid #e2e8f0; }
+.user-avatar { background-color: #0f172a; color: white; width: 35px; height: 35px; font-size: 0.9rem; font-weight: bold; }
+.empty-avatar { background-color: #cbd5e1; color: white; }
+
+.story-actions { display: flex; gap: 8px; margin-left: 15px; padding-left: 15px; border-left: 2px solid #f1f5f9; align-items: center; }
+.action-btn { width: 2.4rem !important; height: 2.4rem !important; border: none !important; transition: all 0.2s !important; }
+.action-btn .pi { font-size: 1rem !important; color: white !important; }
+.action-btn.p-button-secondary { background-color: #475569 !important; box-shadow: 0 2px 4px rgba(71, 85, 105, 0.2); }
+.action-btn.p-button-secondary:hover { background-color: #1e293b !important; transform: translateY(-2px); }
+.action-btn.p-button-danger { background-color: #ef4444 !important; box-shadow: 0 2px 4px rgba(239, 68, 68, 0.3); }
+.action-btn.p-button-danger:hover { background-color: #dc2626 !important; transform: translateY(-2px); }
+
+/* =========================================
+   MODALES Y FORMULARIOS
+========================================= */
+.modal-form { display: flex; flex-direction: column; gap: 1.5rem; margin-top: 1rem; }
+.modal-form label { font-weight: 800; color: #0f172a; margin-bottom: 0.5rem; display: block; font-size: 1.1rem; }
+
+.confirmation-content { display: flex; align-items: center; gap: 20px; font-size: 1.2rem; line-height: 1.5; color: #1e293b; padding: 1rem 0; }
+
+.p-dialog .p-dialog-header .p-dialog-header-icon { background-color: #ef4444 !important; color: white !important; border: 2px solid white !important; border-radius: 50% !important; width: 2.5rem !important; height: 2.5rem !important; box-shadow: 0 2px 5px rgba(0,0,0,0.2); opacity: 1 !important; display: flex !important; justify-content: center !important; align-items: center !important; }
+.p-dialog .p-dialog-header .p-dialog-header-icon:hover { background-color: #dc2626 !important; transform: scale(1.1); }
+.p-dialog .p-dialog-title { font-size: 1.5rem !important; font-weight: 900 !important; color: #0f172a !important; }
+
+/* LISTA DE ÉPICAS EN MODAL */
+.epics-list { display: flex; flex-direction: column; gap: 10px; }
+.epic-list-item { display: flex; justify-content: space-between; align-items: center; background: #f8fafc; padding: 0.8rem 1.2rem; border-radius: 8px; border: 1px solid #e2e8f0; }
+
+.sidebar-footer { padding-top: 1rem; border-top: 1px solid rgba(255, 255, 255, 0.05); margin-top: 1rem; }
+.exit-item { color: #94a3b8; }
+.exit-item:hover { color: white; background: rgba(239, 68, 68, 0.1); border-right: none; }
+.exit-item i { color: #f97316; }
+
+
+/* =========================================
+   MODAL POP-UP DE PRECIOS UNIFICADO (DISEÑO 2 PLANES)
+========================================= */
+.pricing-dialog { background: transparent !important; border: none !important; }
+.pricing-dialog .p-dialog-content { padding: 0 !important; border-radius: 24px; overflow: hidden; }
+
+.pricing-popup-container {
+    background-color: #f8fafc;
+    padding: 3rem 2rem;
+    position: relative;
+    border-radius: 24px;
+}
+
+.popup-close-btn {
+    position: absolute; top: 20px; right: 20px; width: 40px; height: 40px;
+    background: white; border-radius: 50%; display: flex; justify-content: center; align-items: center;
+    cursor: pointer; box-shadow: 0 4px 10px rgba(0,0,0,0.1); color: #64748b; transition: all 0.2s; z-index: 100;
+}
+
+.upgrade-header { text-align: center; margin-bottom: 3rem; }
+.upgrade-header h1 { font-size: 3rem; color: #0f172a; font-weight: 900; margin: 0; }
+.upgrade-header p { font-size: 1.1rem; color: #64748b; margin-top: 8px; }
+
+/* AJUSTE MAGISTRAL: Grilla de 2 columnas perfectamente centrada */
+.pricing-grid { 
+    display: grid; 
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 3rem; 
+    max-width: 750px; /* Reducimos el ancho para que las 2 tarjetas no se estiren en exceso */
+    margin: 0 auto; /* Centramos la grilla en el modal */
+    align-items: stretch;
+}
+
+.pricing-card {
+    background: white; border-radius: 20px; padding: 2.5rem 2rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.04); border: 1px solid #e2e8f0;
+    display: flex; flex-direction: column; height: 100%; transition: transform 0.3s ease;
+}
+
+.pricing-card.popular {
+    border: 2px solid #8b5cf6 !important; /* Morado recomendado */
+    transform: scale(1.05); /* Ligeramente más grande */
+    box-shadow: 0 15px 35px rgba(139, 92, 246, 0.15);
+    z-index: 10;
+}
+
+.recommended-badge {
+    position: absolute; top: -15px; left: 50%; transform: translateX(-50%);
+    background: #8b5cf6; color: white; padding: 6px 15px; border-radius: 20px;
+    font-size: 0.8rem; font-weight: 800; letter-spacing: 1px;
+}
+
+.pricing-header { text-align: center; margin-bottom: 2rem; border-bottom: 1px solid #f1f5f9; padding-bottom: 1.5rem; }
+.pricing-header h3 { font-size: 1.6rem; color: #0f172a; margin: 0 0 5px 0; font-weight: 800; }
+.pricing-header p { font-size: 0.95rem; color: #64748b; margin: 0; }
+
+.price { display: flex; justify-content: center; align-items: flex-start; color: #0f172a; margin-top: 1.5rem; }
+.currency { font-size: 1.8rem; font-weight: bold; margin-top: 5px; }
+.amount { font-size: 4.5rem; font-weight: 900; line-height: 1; }
+.period { font-size: 1rem; color: #64748b; align-self: flex-end; margin-bottom: 10px; font-weight: 600; margin-left: 5px;}
+
+/* Estructura para asegurar que el botón siempre quede abajo */
+.pricing-features { flex: 1; display: flex; flex-direction: column; margin-bottom: 2rem; }
+.pricing-features ul { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 1.2rem; }
+.pricing-features li { display: flex; align-items: center; gap: 10px; font-weight: 600; color: #334155; font-size: 1rem; }
+.pricing-features li i { color: #22c55e; font-size: 1.1rem; }
+.pricing-features li.disabled { color: #94a3b8; text-decoration: line-through; }
+.pricing-features li.disabled i { color: #cbd5e1; }
+
+/* Para responsividad en móviles */
+@media (max-width: 768px) {
+    .pricing-grid { grid-template-columns: 1fr; gap: 2rem; }
+    .pricing-card.popular { transform: none; }
+}

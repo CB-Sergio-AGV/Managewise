@@ -1,0 +1,42 @@
+/* Heredamos estilos del layout base (Dashboard wrapper, sidebar, etc) que ya tienes globales */
+
+.activity-inner { max-width: 1000px; }
+
+.timeline-date-divider {
+    font-size: 1.1rem; font-weight: 800; color: #0f172a;
+    margin: 2rem 0 1rem 0; padding-bottom: 0.5rem; border-bottom: 2px dashed #e2e8f0;
+}
+
+.activity-timeline-container {
+    background: white; border-radius: 20px; padding: 2rem;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.03); border: 1px solid #cbd5e1;
+}
+
+.timeline-item {
+    display: flex; align-items: flex-start; gap: 1.5rem;
+    padding: 1.5rem 0; position: relative;
+}
+
+/* Línea conectora entre items */
+.timeline-item:not(:last-child)::after {
+    content: ''; position: absolute; left: 24px; top: 60px; bottom: -10px;
+    width: 2px; background-color: #f1f5f9; z-index: 1;
+}
+
+.timeline-icon {
+    width: 50px; height: 50px; min-width: 50px; border-radius: 50%;
+    display: flex; justify-content: center; align-items: center; font-size: 1.3rem; z-index: 2;
+}
+
+.timeline-content {
+    background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 16px;
+    padding: 1.2rem; flex: 1; display: flex; justify-content: space-between; align-items: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.timeline-content:hover { transform: translateX(5px); box-shadow: 0 4px 10px rgba(0,0,0,0.05); background: white; border-color: #cbd5e1; }
+
+.timeline-text { display: flex; align-items: center; gap: 10px; font-size: 1.1rem; color: #334155; }
+.timeline-avatar { font-size: 0.8rem; background-color: #0f172a; color: white; }
+.t-user { font-weight: 800; color: #0f172a; }
+.timeline-time { font-size: 0.9rem; color: #64748b; font-weight: 600; white-space: nowrap; }

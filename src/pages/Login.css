@@ -1,0 +1,194 @@
+/* Contenedor principal: Pantalla completa y fondo blanco */
+.auth-page {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  position: relative;
+  background-color: #ffffff;
+}
+
+/* Sección Visual: Imagen de fondo */
+.visual-section {
+  flex: 1;
+  position: relative;
+  background-image: url('https://www.unir.net/wp-content/uploads/2018/03/eficaz_para_empresa.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 2;
+}
+
+.visual-overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.7));
+  z-index: 1;
+}
+
+.visual-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 0 4rem;
+}
+
+.visual-content h1 {
+  font-size: 5rem;
+  font-weight: 900;
+  color: #f97316;
+  margin: 0;
+  text-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+}
+
+.visual-content p {
+  font-size: 1.4rem;
+  margin-top: 1.5rem;
+  max-width: 500px;
+  color: #ffffff;
+  line-height: 1.5;
+}
+
+/* Sección del Formulario */
+.form-section {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 1;
+}
+
+/* Animación de intercambio */
+.auth-page.is-register .visual-section { transform: translateX(100%); }
+.auth-page.is-register .form-section { transform: translateX(-100%); }
+
+/* Tarjeta de Formulario */
+.auth-card {
+  width: 100%;
+  max-width: 450px; 
+  padding: 3rem 2rem;
+  box-sizing: border-box;
+}
+
+.auth-card h2 {
+  font-size: 2.8rem;
+  font-weight: 900;
+  color: #0f172a;
+  margin-bottom: 0.5rem;
+}
+
+.auth-subtitle {
+  margin-bottom: 2.5rem;
+  color: #64748b;
+  font-size: 1.1rem;
+}
+
+/* ==============================================
+   FORMULARIO Y CONTENEDORES ARREGLADOS
+============================================== */
+form {
+  width: 100%;
+  display: flex;
+  flex-direction: column; /* Obliga a que todo vaya hacia abajo en bloque */
+  box-sizing: border-box;
+}
+
+.field-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+  text-align: left;
+  width: 100%;
+}
+
+.field-container label {
+  font-weight: 800;
+  color: #334155;
+}
+
+/* Alineación de PrimeReact */
+.p-inputtext,
+.p-password,
+.p-password input {
+  width: 100% !important;
+}
+
+.p-inputtext {
+  padding: 1rem !important; 
+  font-size: 1.1rem !important;
+  border-radius: 8px !important;
+  box-sizing: border-box !important;
+}
+
+/* ==============================================
+   BOTÓN INDESTRUCTIBLE
+============================================== */
+.action-btn {
+  width: 100% !important;
+  box-sizing: border-box !important;
+  display: block !important; 
+  background-color: #f97316 !important;
+  border: 2px solid #f97316 !important;
+  padding: 1rem 0 !important; /* 0 en los lados evita que el padding aplaste el texto */
+  margin-top: 1rem !important;
+  border-radius: 8px !important;
+  transition: all 0.2s !important;
+}
+
+.action-btn .p-button-label {
+  display: block !important;
+  width: 100% !important;
+  font-size: 1.2rem !important;
+  font-weight: 800 !important;
+  color: white !important;
+  text-align: center !important;
+  white-space: nowrap !important; /* LA MAGIA: Prohíbe que el texto se rompa o encoja */
+}
+
+.action-btn:hover { 
+  background-color: #ea580c !important; 
+  border-color: #ea580c !important; 
+}
+
+/* ============================================== */
+
+.switch-text {
+  margin-top: 2rem;
+  text-align: center;
+  color: #64748b;
+  font-weight: 600;
+}
+
+.switch-btn {
+  color: #f97316;
+  font-weight: 800;
+  cursor: pointer;
+  text-decoration: underline;
+  margin-left: 5px;
+  background: none;
+  border: none;
+  font-size: 1rem;
+}
+
+.switch-btn:hover { color: #ea580c; }
+
+.animate-fade { animation: fadeIn 0.5s ease-in-out; }
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 900px) {
+  .visual-section { display: none; }
+  .auth-page.is-register .form-section { transform: translateX(0); }
+}

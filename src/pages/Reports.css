@@ -1,0 +1,132 @@
+.reports-inner { max-width: 1400px; padding: 2rem; margin: 0 auto; width: 100%; }
+
+.reports-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 3rem; }
+.reports-header h1 { font-size: 3.5rem; color: #0f172a; font-weight: 900; margin: 0; }
+.reports-header p { font-size: 1.2rem; color: #64748b; margin-top: 10px; }
+
+/* Botones Exportación - ÍCONO PDF AÑADIDO */
+.export-zone-pro { display: flex; flex-direction: column; align-items: center; gap: 12px; }
+.export-title-pro { font-size: 1rem; font-weight: 900; color: #475569; letter-spacing: 1px; text-transform: uppercase; }
+.export-btn-group-pro { display: flex; gap: 12px; }
+.export-btn-pro { width: 60px; height: 60px; border-radius: 14px; border: none; cursor: pointer; display: flex; justify-content: center; align-items: center; transition: transform 0.2s, box-shadow 0.2s; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+.export-btn-pro:hover { transform: translateY(-5px); box-shadow: 0 8px 15px rgba(0,0,0,0.2); }
+
+.btn-pdf { background-color: #ef4444; }
+.icon-pdf { color: white; font-size: 1.8rem; font-weight: bold; } /* Icono Blanco */
+.btn-excel { background-color: #151515; }
+.icon-excel { color: #22c55e; font-size: 1.8rem; font-weight: bold; }
+.btn-powerbi { background-color: #151515; }
+.icon-powerbi { color: #a855f7; font-size: 1.8rem; font-weight: bold; }
+
+/* Grilla Superior */
+.reports-top-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; margin-bottom: 4rem; align-items: stretch; }
+.config-card { border-radius: 20px !important; border: 1px solid #e2e8f0 !important; box-shadow: 0 10px 30px rgba(0,0,0,0.04) !important; height: 100%; }
+.config-card .p-card-title { font-size: 1.6rem !important; font-weight: 800 !important; color: #0f172a !important; margin-bottom: 2rem !important; }
+.report-form { display: flex; flex-direction: column; gap: 2rem; }
+.report-form label { font-weight: 800; color: #334155; margin-bottom: 0.8rem; display: block; font-size: 1.1rem; }
+.mt-3 { margin-top: 1.5rem; padding: 1.2rem !important; font-size: 1.1rem !important; }
+.field-checkbox-custom { display: flex; align-items: center; gap: 15px; background: #f8fafc; padding: 1.5rem; border-radius: 12px; border: 1px solid #cbd5e1; cursor: pointer; }
+.field-checkbox-custom label { margin: 0 !important; cursor: pointer; color: #0f172a !important; font-weight: 800 !important; font-size: 1.1rem !important;}
+
+/* Panel API */
+.api-panel-wrapper { display: flex; flex-direction: column; gap: 2rem; height: 100%; justify-content: space-between; }
+.api-card { background: #0f172a !important; color: white !important; border-radius: 20px !important; box-shadow: 0 15px 30px rgba(15, 23, 42, 0.2) !important; flex: 1; }
+.api-card .p-card-body { padding: 2rem !important; }
+.api-card h3 { margin: 0 0 1rem 0; font-size: 1.5rem; display: flex; align-items: center; gap: 10px; color: #38bdf8; font-weight: 800; }
+.api-card p { color: #94a3b8; margin-bottom: 2rem; line-height: 1.6; font-size: 1.1rem; }
+.api-key-container { display: flex; align-items: stretch; gap: 10px; margin-bottom: 2rem; width: 100%; }
+.api-key-input { flex: 1; background: #1e293b !important; border: 1px solid #334155 !important; color: #22c55e !important; font-family: monospace !important; font-weight: bold; font-size: 1.1rem; padding: 1rem !important; border-radius: 8px !important; }
+.copy-btn { border-radius: 8px !important; border: none !important; width: 50px !important; height: auto !important;}
+.api-status { display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 1.5rem; }
+.api-docs-link { color: #38bdf8; text-decoration: none; font-weight: 700; display: flex; align-items: center; gap: 8px; cursor: pointer; }
+
+/* =========================================
+   CANVAS DE REPORTE Y CORRECCIÓN DE GRÁFICOS
+========================================= */
+.preview-section { margin-top: 2rem; }
+.preview-header { display: flex; align-items: center; gap: 20px; margin-bottom: 2rem; }
+.preview-header h2 { font-size: 2rem; font-weight: 900; color: #0f172a; margin: 0; }
+.preview-badge { background: #8b5cf6; color: white; padding: 5px 15px; border-radius: 20px; font-size: 0.8rem; font-weight: 900; letter-spacing: 1px; }
+
+.report-canvas {
+    background: white; border-radius: 12px; padding: 3rem;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.08); border: 1px solid #cbd5e1;
+    display: flex; flex-direction: column; gap: 3rem;
+}
+
+.canvas-header { display: flex; justify-content: space-between; align-items: flex-start; border-bottom: 2px solid #0f172a; padding-bottom: 1.5rem; }
+.canvas-title-group h2 { margin: 0 0 10px 0; font-size: 1.8rem; color: #0f172a; font-weight: 900; }
+.canvas-title-group p { margin: 0; color: #475569; font-size: 1rem; }
+.canvas-logo { background: #f97316; color: white; font-weight: 900; padding: 10px 20px; border-radius: 8px; letter-spacing: 1px; }
+
+.canvas-kpi-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; }
+.kpi-box { background: #f8fafc; border: 1px solid #e2e8f0; padding: 1.5rem; border-radius: 12px; display: flex; flex-direction: column; gap: 10px; }
+.kpi-label { font-size: 0.95rem; font-weight: 800; color: #64748b; text-transform: uppercase; }
+.kpi-value-group { display: flex; align-items: baseline; gap: 15px; }
+.kpi-value { font-size: 2.5rem; font-weight: 900; color: #0f172a; line-height: 1; }
+.kpi-trend { font-size: 0.9rem; font-weight: 800; display: flex; align-items: center; gap: 4px; padding: 4px 8px; border-radius: 20px; }
+.kpi-trend.positive { background: #dcfce7; color: #166534; } 
+.kpi-trend.negative { background: #fee2e2; color: #991b1b; } 
+
+/* CORRECCIÓN DE DESBORDAMIENTO DE GRÁFICOS */
+.canvas-charts-grid { 
+    display: grid; 
+    grid-template-columns: 2fr 1fr; 
+    gap: 2rem; 
+    min-width: 0; /* SOLUCIÓN: Permite que el grid se encoja sin desbordar */
+}
+.canvas-chart-box { 
+    border: 1px solid #e2e8f0; 
+    padding: 1.5rem; 
+    border-radius: 12px; 
+    min-width: 0; /* SOLUCIÓN: Limita el ancho al contenedor padre */
+    width: 100%;
+    overflow: hidden;
+}
+.canvas-chart-box h3 { margin: 0 0 1.5rem 0; font-size: 1.1rem; color: #334155; font-weight: 800; }
+.chart-container-relative { position: relative; width: 100%; }
+
+.canvas-ai-conclusion { background: #fffbeb; border-left: 4px solid #fbbf24; padding: 1.5rem; border-radius: 0 8px 8px 0; }
+.ai-c-header { display: flex; align-items: center; gap: 10px; color: #d97706; font-weight: 900; font-size: 1.1rem; margin-bottom: 10px; }
+.canvas-ai-conclusion p { margin: 0; color: #92400e; font-size: 1.05rem; line-height: 1.6; }
+
+.canvas-table-box h3 { margin: 0 0 1rem 0; font-size: 1.1rem; color: #334155; font-weight: 800; border-bottom: 1px solid #e2e8f0; padding-bottom: 1rem; }
+
+/* =========================================
+   LA MAGIA DEL PDF FRONTEND (@media print)
+========================================= */
+@media print {
+    /* Oculta TODO lo que tenga esta clase */
+    .hide-on-print {
+        display: none !important;
+    }
+    
+    /* Prepara el fondo para la hoja de papel */
+    body {
+        background-color: white !important;
+        margin: 0;
+        padding: 0;
+    }
+    
+    /* Hace que el contenido principal ocupe todo el ancho */
+    .print-full-width {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        display: block !important;
+    }
+
+    /* Le quita la sombra y bordes al canvas para que se imprima limpio */
+    .report-canvas {
+        box-shadow: none !important;
+        border: none !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
+    /* Evita que los gráficos se corten entre páginas */
+    .canvas-chart-box, .canvas-table-box {
+        page-break-inside: avoid;
+    }
+}

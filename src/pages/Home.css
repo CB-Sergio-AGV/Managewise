@@ -1,0 +1,157 @@
+/* =========================================
+   LAYOUT GENERAL
+========================================= */
+.dashboard-wrapper { display: flex; width: 100vw; height: 100vh; background-color: #f1f5f9; overflow: hidden; }
+
+.dashboard-sidebar { width: 280px; min-width: 280px; background-color: #0f172a; padding: 3rem 0; display: flex; flex-direction: column; }
+
+.brand { font-size: 2.2rem; font-weight: 900; color: #f97316; text-align: center; margin-bottom: 4rem; letter-spacing: -1px; }
+
+.nav-links { flex: 1; }
+
+.nav-item { padding: 1.5rem 2.5rem; font-weight: 700; font-size: 1.1rem; color: #94a3b8; cursor: pointer; display: flex; align-items: center; gap: 20px; transition: all 0.3s; }
+.nav-item:hover { color: white; background: rgba(255, 255, 255, 0.05); }
+.nav-item.active { color: white; background: rgba(249, 115, 22, 0.1); border-right: 6px solid #f97316; }
+
+/* BOTÓN DE IA EN EL SIDEBAR */
+.ai-nav-item { align-items: center; }
+.ai-nav-item:hover .pro-text { color: white; }
+.ai-text { display: flex; flex-direction: column; line-height: 1.2; font-size: 1.1rem; }
+.pro-text { margin-left: auto; font-size: 0.9rem; font-weight: 800; color: #94a3b8; transition: color 0.3s; }
+
+/* FOOTER DEL SIDEBAR */
+.sidebar-footer { padding-top: 1rem; border-top: 1px solid rgba(255, 255, 255, 0.05); margin-top: 1rem; }
+.exit-item { color: #94a3b8; }
+.exit-item:hover { color: white; background: rgba(239, 68, 68, 0.1); border-right: none; }
+.exit-item i { color: #f97316; }
+
+/* =========================================
+   CONTENIDO PRINCIPAL
+========================================= */
+.dashboard-content { flex: 1; overflow-y: auto; display: flex; justify-content: center; padding: 2rem; }
+.content-inner { width: 100%; max-width: 1600px; }
+
+/* HEADER Y EXPORTACIÓN */
+.content-header { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 3rem; }
+.content-header h1 { font-size: 3.5rem; color: #0f172a; font-weight: 900; margin: 0; }
+.content-header p { font-size: 1.4rem; color: #64748b; margin-top: 10px; }
+
+.export-actions { display: flex; flex-direction: column; gap: 8px; align-items: flex-end; }
+.export-label { font-size: 0.9rem; font-weight: 800; color: #64748b; text-transform: uppercase; letter-spacing: 0.5px; }
+.export-buttons-group { display: flex; gap: 10px; }
+.action-btn-sm { width: 3rem !important; height: 3rem !important; border-radius: 8px !important; border-width: 2px !important; transition: all 0.2s !important; }
+.action-btn-sm .pi { font-size: 1.3rem !important; }
+.action-btn-sm:hover { transform: translateY(-3px); box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+
+/* GRID LAYOUT */
+.main-grid-layout { display: flex; gap: 3rem; align-items: flex-start; }
+
+/* NAVEGACIÓN DE SPRINTS */
+.sprint-navigation { width: 350px; min-width: 350px; }
+.section-label { font-size: 1.2rem; font-weight: 800; color: #94a3b8; text-transform: uppercase; margin-bottom: 1.5rem; }
+
+.sprint-hero-card {
+    background: black; padding: 1.8rem; border-radius: 20px; margin-bottom: 1.5rem;
+    display: flex; justify-content: space-between; align-items: center; cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); border: 2px solid transparent;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05); color: white;
+}
+.sprint-hero-card:hover { border-color: #f97316; transform: translateY(-3px); }
+.sprint-hero-card.active { background: #f97316; color: black; transform: scale(1.05); box-shadow: 0 20px 25px -5px rgba(249, 115, 22, 0.3); border-color: transparent; }
+
+.sprint-main-info { display: flex; flex-direction: column; gap: 10px; align-items: flex-start; }
+.sprint-number { font-size: 1.6rem; font-weight: 900; }
+.sprint-hero-card i { font-size: 1.5rem; opacity: 0.5; transition: opacity 0.3s; }
+.sprint-hero-card:hover i { opacity: 1; }
+
+/* SECCIÓN GRÁFICOS */
+.graphics-section { flex: 1; display: flex; flex-direction: column; gap: 2rem; min-width: 0; }
+.chart-container { width: 100%; }
+.lower-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
+
+/* MÉTRICAS GIGANTES */
+.giant-stats { display: flex; justify-content: space-around; padding: 1.5rem 0; text-align: center; }
+.g-label { font-size: 1rem; font-weight: 900; color: #94a3b8; display: block; margin-bottom: 10px; }
+.g-value { font-size: 4.5rem; font-weight: 900; margin: 0; color: #0f172a; line-height: 1; }
+.text-orange { color: #f97316; }
+.text-red { color: #ef4444; }
+
+/* ESTILOS CARDS PRIMEREACT */
+.p-card-title { font-size: 1.8rem !important; font-weight: 800 !important; color: #0f172a !important; }
+.p-card { border-radius: 24px !important; box-shadow: 0 10px 20px -5px rgba(0,0,0,0.06) !important; border: none !important; }
+
+/* HISTORIAL DE ACTIVIDAD */
+.activity-feed-card { margin-top: 1rem; }
+.activity-feed-card .p-card-title { margin-bottom: 1rem !important; }
+.activity-list { display: flex; flex-direction: column; gap: 1rem; }
+.activity-item {
+    display: flex; align-items: center; gap: 1.2rem; padding: 1.2rem;
+    background-color: #f8fafc; border: 1px solid #e2e8f0; border-radius: 16px; transition: background-color 0.2s;
+}
+.activity-item:hover { background-color: white; border-color: #cbd5e1; box-shadow: 0 2px 8px rgba(0,0,0,0.02); }
+.activity-icon-container { width: 50px; height: 50px; min-width: 50px; border-radius: 50%; display: flex; justify-content: center; align-items: center; font-size: 1.3rem; }
+.activity-details { display: flex; flex-direction: column; gap: 4px; }
+.activity-text { margin: 0; font-size: 1.1rem; color: #334155; line-height: 1.4; }
+.activity-text strong { color: #0f172a; font-weight: 800; }
+.activity-time { display: flex; align-items: center; font-size: 0.9rem; color: #64748b; font-weight: 600; }
+
+/* =========================================
+   MODAL POP-UP DE PRECIOS
+========================================= */
+.pricing-dialog { background: transparent !important; box-shadow: none !important; border: none !important; }
+.pricing-dialog .p-dialog-content { padding: 0 !important; border-radius: 24px; overflow: hidden; }
+
+.pricing-popup-container { background-color: #f8fafc; padding: 3rem 2rem; position: relative; border-radius: 24px; }
+
+.popup-close-btn {
+    position: absolute; top: 20px; right: 20px; width: 40px; height: 40px; background: white; border-radius: 50%;
+    display: flex; justify-content: center; align-items: center; cursor: pointer; box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    color: #64748b; transition: all 0.2s; z-index: 100;
+}
+.popup-close-btn:hover { background: #ef4444; color: white; transform: scale(1.1); }
+
+.upgrade-header { text-align: center; margin-bottom: 3rem; }
+.upgrade-header h1 { font-size: 3rem; color: #0f172a; font-weight: 900; margin: 0 0 10px 0; letter-spacing: -1px; }
+.upgrade-header p { font-size: 1.2rem; color: #64748b; margin: 0; }
+
+.pricing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; align-items: center; }
+
+.pricing-card {
+    background: white; border-radius: 20px; padding: 2.5rem 2rem; box-shadow: 0 4px 15px rgba(0,0,0,0.04);
+    border: 1px solid #e2e8f0; position: relative; display: flex; flex-direction: column; height: 100%; transition: transform 0.3s ease;
+}
+.pricing-card:hover { transform: translateY(-10px); box-shadow: 0 15px 30px rgba(0,0,0,0.08); }
+
+.pricing-header { text-align: center; margin-bottom: 2rem; border-bottom: 1px solid #f1f5f9; padding-bottom: 2rem; }
+.pricing-header h3 { font-size: 1.5rem; color: #0f172a; margin: 0 0 5px 0; font-weight: 800; }
+.pricing-header p { font-size: 0.95rem; color: #64748b; margin: 0 0 1.5rem 0; }
+
+.price { display: flex; justify-content: center; align-items: flex-start; color: #0f172a; }
+.currency { font-size: 1.5rem; font-weight: bold; margin-top: 5px; }
+.amount { font-size: 4.5rem; font-weight: 900; line-height: 1; }
+.period { font-size: 1rem; color: #64748b; align-self: flex-end; margin-bottom: 10px; font-weight: 600; }
+
+.pricing-features { flex: 1; margin-bottom: 2rem; }
+.pricing-features ul { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 1.2rem; }
+.pricing-features li { display: flex; align-items: center; gap: 10px; font-size: 1rem; color: #334155; font-weight: 600; }
+.pricing-features li i { color: #22c55e; font-size: 1rem; font-weight: bold; }
+.pricing-features li.disabled { color: #94a3b8; text-decoration: line-through; }
+.pricing-features li.disabled i { color: #cbd5e1; }
+
+.pricing-card.popular { border: 2px solid #8b5cf6; box-shadow: 0 20px 40px rgba(139, 92, 246, 0.15); transform: scale(1.05); z-index: 10; }
+.pricing-card.popular:hover { transform: scale(1.05) translateY(-10px); }
+
+.recommended-badge {
+    position: absolute; top: -15px; left: 50%; transform: translateX(-50%); background: #8b5cf6; color: white;
+    padding: 6px 15px; border-radius: 20px; font-size: 0.8rem; font-weight: 800; letter-spacing: 1px; text-transform: uppercase;
+}
+
+.p-button-orange { background-color: #f97316 !important; border: 2px solid #f97316 !important; font-weight: 800 !important; color: white !important; padding: 1rem !important;}
+.p-button-orange:hover { background-color: #ea580c !important; border-color: #ea580c !important; }
+
+@media (max-width: 1024px) {
+    .pricing-grid { grid-template-columns: 1fr; gap: 3rem; }
+    .pricing-card.popular { transform: none; }
+    .pricing-card.popular:hover { transform: translateY(-10px); }
+    .content-header { flex-direction: column; align-items: flex-start; gap: 1.5rem; }
+}

@@ -1,0 +1,115 @@
+/* =========================================
+   CONTENEDOR PRINCIPAL
+========================================= */
+.profile-wrapper { 
+    width: 100vw;          
+    min-height: 100vh; 
+    background-color: #f1f5f9; 
+    display: flex; 
+    flex-direction: column; 
+    overflow-x: hidden;
+}
+
+/* Navbar superior (Reutilizado de Projects) */
+.projects-navbar {
+    background-color: #0f172a; height: 70px; display: flex; justify-content: space-between;
+    align-items: center; padding: 0 3rem; box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+.brand-logo { font-size: 1.8rem; font-weight: 900; color: #f97316; letter-spacing: -1px; }
+
+.text-white { color: white !important; font-weight: bold !important; }
+.text-white:hover { background-color: rgba(255,255,255,0.1) !important; }
+
+/* Contenido Principal */
+.profile-main { flex: 1; display: flex; justify-content: center; padding: 3rem 2rem; }
+.profile-container { width: 100%; max-width: 800px; display: flex; flex-direction: column; gap: 2rem; }
+
+/* =========================================
+   TARJETAS Y SECCIONES
+========================================= */
+.profile-header-card { background: white; border-radius: 16px; padding: 2.5rem; display: flex; align-items: center; gap: 2.5rem; box-shadow: 0 4px 15px rgba(0,0,0,0.03); border: 1px solid #cbd5e1; }
+.avatar-section { display: flex; flex-direction: column; align-items: center; gap: 1rem; }
+.profile-big-avatar { width: 110px; height: 110px; font-size: 2.8rem; background-color: #f97316; color: white; }
+.profile-title-info h2 { margin: 0; font-size: 2.5rem; color: #0f172a; font-weight: 900; }
+.profile-title-info p { margin: 10px 0 0 0; color: #64748b; font-size: 1.1rem; }
+
+.profile-body-grid { display: flex; flex-direction: column; gap: 2rem; }
+
+.settings-card { background: white; border-radius: 16px; padding: 2.5rem; box-shadow: 0 4px 15px rgba(0,0,0,0.03); border: 1px solid #cbd5e1; }
+.settings-card h3 { margin: 0 0 1rem 0; color: #0f172a; font-size: 1.5rem; font-weight: 800; }
+.settings-card hr { border: 0; border-top: 2px dashed #e2e8f0; margin-bottom: 2rem; }
+
+.form-group { margin-bottom: 1.5rem; display: flex; flex-direction: column; gap: 0.6rem; }
+.form-group label { font-weight: 800; color: #475569; font-size: 1rem; }
+
+/* =========================================
+   BOTONES Y UTILIDADES
+========================================= */
+.mt-3 { margin-top: 1.5rem !important; }
+
+.p-button-orange { background-color: #f97316 !important; border: 2px solid #f97316 !important; font-weight: 800 !important; color: white !important; }
+.p-button-orange:hover { background-color: #ea580c !important; border-color: #ea580c !important; }
+
+/* Nuevo botón oscuro para "Actualizar Contraseña" y "Cerrar Sesión" */
+.btn-dark {
+    background-color: #475569 !important;
+    border: none !important;
+    color: white !important;
+    font-weight: bold !important;
+    padding: 0.8rem 1.5rem !important;
+}
+.btn-dark:hover { background-color: #1e293b !important; }
+
+/* =========================================
+   ZONA DE PELIGRO (DANGER ZONE)
+========================================= */
+.danger-zone { 
+    border: 2px solid #fca5a5; 
+    background-color: #fef2f2; /* Fondo rojizo muy suave */
+}
+
+.danger-zone h3 { color: #b91c1c; }
+.danger-zone hr { border-top: 2px dashed #fca5a5; }
+
+/* Diseño en columna para los botones de peligro */
+.danger-actions {
+    display: flex;
+    flex-direction: column; /* Apila los elementos verticalmente */
+    gap: 1.5rem;            /* Espacio grande entre elementos */
+    align-items: flex-start; /* Alinea a la izquierda */
+}
+
+.danger-divider {
+    width: 100%;
+    height: 1px;
+    background-color: #fecaca;
+}
+
+.delete-warning {
+    color: #991b1b;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    background-color: #fee2e2;
+    padding: 1rem;
+    border-radius: 8px;
+    border-left: 4px solid #ef4444;
+}
+
+.p-button-danger { 
+    background-color: #ef4444 !important; 
+    border: 2px solid #ef4444 !important; 
+    font-weight: bold !important; 
+}
+.p-button-danger:hover { background-color: #dc2626 !important; border-color: #dc2626 !important; }
+
+/* =========================================
+   ESTILOS PARA EL MODAL (Dialog) DE CONFIRMACIÓN
+========================================= */
+.p-dialog .p-dialog-header .p-dialog-header-icon {
+    background-color: #ef4444 !important; color: white !important; border: 2px solid white !important; 
+    border-radius: 50% !important; width: 2.5rem !important; height: 2.5rem !important;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); opacity: 1 !important; display: flex !important; 
+    justify-content: center !important; align-items: center !important; 
+}
+.p-dialog .p-dialog-header .p-dialog-header-icon:hover { background-color: #dc2626 !important; transform: scale(1.1); }
+.p-dialog .p-dialog-title { font-size: 1.5rem !important; font-weight: 900 !important; color: #0f172a !important; }

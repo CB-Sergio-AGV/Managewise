@@ -1,0 +1,72 @@
+/* Limpiamos los márgenes por defecto */
+body, html, #root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: var(--font-family); /* Usa la fuente de PrimeReact */
+  background-color: #f4f6f9; /* Fondo gris claro */
+}
+
+/* Contenedor principal que centra la tarjeta */
+.auth-container {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Diseño de la tarjeta blanca */
+.auth-card {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  width: 100%;
+  max-width: 420px;
+  text-align: center;
+}
+
+/* Detalles internos */
+.auth-logo {
+  color: #f97316; /* Naranja ManageWise */
+  font-weight: 800;
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.auth-subtitle {
+  color: #6c757d;
+  margin-bottom: 2rem;
+}
+
+.p-field {
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+.p-field label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.auth-footer {
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  color: #6c757d;
+}
+
+.auth-link {
+  color: #f97316;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.auth-link:hover {
+  text-decoration: underline;
+}

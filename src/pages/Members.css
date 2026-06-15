@@ -1,0 +1,270 @@
+/* =========================================
+   LAYOUT GENERAL (Reutilizado)
+========================================= */
+.dashboard-wrapper {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    background-color: #f1f5f9;
+    overflow: hidden;
+}
+
+.dashboard-sidebar {
+    width: 280px;
+    min-width: 280px;
+    background-color: #0f172a;
+    padding: 3rem 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.brand { 
+    font-size: 2.2rem; font-weight: 900; color: #f97316; 
+    text-align: center; margin-bottom: 4rem; letter-spacing: -1px;
+}
+
+.nav-links { flex: 1; }
+
+.nav-item {
+    padding: 1.5rem 2.5rem; font-weight: 700; font-size: 1.1rem;
+    color: #94a3b8; cursor: pointer; display: flex; align-items: center; gap: 20px;
+    transition: all 0.3s;
+}
+
+.nav-item:hover { color: white; background: rgba(255, 255, 255, 0.05); }
+.nav-item.active { color: white; background: rgba(249, 115, 22, 0.1); border-right: 6px solid #f97316; }
+
+.dashboard-content {
+    flex: 1;
+    overflow-y: auto;
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.team-inner {
+    width: 100%;
+    max-width: 1300px; 
+}
+
+/* =========================================
+   CABECERA Y BOTONES
+========================================= */
+.team-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3rem;
+}
+
+.team-header h1 { font-size: 3.5rem; color: #0f172a; font-weight: 900; margin: 0; }
+.team-header p { font-size: 1.2rem; color: #64748b; margin-top: 10px; }
+
+.action-buttons {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.p-button-orange { 
+    background-color: #f97316 !important; 
+    border: 2px solid #f97316 !important; 
+    font-weight: 800 !important; 
+    color: white !important;
+}
+
+/* NUEVO BOTÓN ADMINISTRAR ROLES (Gris Oscuro) */
+.btn-role {
+    background-color: #1e293b !important; 
+    color: white !important; 
+    border: 2px solid #1e293b !important;
+    font-weight: 800 !important;
+}
+
+.btn-role:hover {
+    background-color: #334155 !important;
+    border-color: #334155 !important;
+}
+
+/* =========================================
+   GRID DE MIEMBROS
+========================================= */
+.members-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 2rem;
+}
+
+.empty-msg {
+    grid-column: 1 / -1;
+    text-align: center;
+    font-size: 1.2rem;
+    color: #94a3b8;
+    padding: 3rem;
+    border: 2px dashed #cbd5e1;
+    border-radius: 12px;
+}
+
+/* =========================================
+   DISEÑO DE TARJETA DE MIEMBRO
+========================================= */
+.member-card {
+    background-color: white;
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.04);
+    border: 1px solid #f1f5f9;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.member-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    border-color: #e2e8f0;
+}
+
+.member-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 1.5rem;
+}
+
+.member-avatar {
+    background-color: #0f172a;
+    color: white;
+    font-weight: bold;
+    font-size: 1.5rem;
+    border: 3px solid #f1f5f9;
+}
+
+.member-title h3 {
+    margin: 0 0 8px 0;
+    font-size: 1.3rem;
+    color: #1e293b;
+    font-weight: 800;
+}
+
+.role-tag {
+    font-size: 0.75rem !important;
+    padding: 4px 10px !important;
+    font-weight: 800 !important;
+    letter-spacing: 0.5px;
+}
+
+.member-divider {
+    border: 0;
+    height: 1px;
+    background: #e2e8f0;
+    margin: 0 0 1.5rem 0;
+}
+
+.member-details {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 2rem;
+    flex: 1;
+}
+
+.detail-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #64748b;
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+.detail-row i {
+    color: #f97316; 
+    font-size: 1.1rem;
+    width: 20px;
+    text-align: center;
+}
+
+/* =========================================
+   BOTONES DE ACCIÓN (Editar/Eliminar) GLOBALES
+========================================= */
+.member-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: auto;
+}
+
+.action-btn { 
+    width: 2.5rem !important; 
+    height: 2.5rem !important;
+    border: none !important;
+    transition: all 0.2s !important;
+}
+
+.action-btn .pi {
+    font-size: 1.1rem !important;
+    color: white !important; 
+}
+
+.action-btn.p-button-secondary { background-color: #475569 !important; box-shadow: 0 2px 4px rgba(71, 85, 105, 0.2); }
+.action-btn.p-button-secondary:hover { background-color: #1e293b !important; transform: translateY(-2px); }
+
+.action-btn.p-button-danger { background-color: #ef4444 !important; box-shadow: 0 2px 4px rgba(239, 68, 68, 0.3); }
+.action-btn.p-button-danger:hover { background-color: #dc2626 !important; transform: translateY(-2px); }
+
+/* =========================================
+   MODALES Y FORMULARIOS
+========================================= */
+.modal-form { display: flex; flex-direction: column; gap: 1.5rem; margin-top: 1rem; }
+.modal-form label { font-weight: 800; color: #0f172a; margin-bottom: 0.5rem; display: block; font-size: 1.1rem; }
+
+.p-dialog .p-dialog-header .p-dialog-header-icon {
+    background-color: #ef4444 !important; 
+    color: white !important; 
+    border: 2px solid white !important; 
+    border-radius: 50% !important; 
+    width: 2.5rem !important;
+    height: 2.5rem !important;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); 
+    opacity: 1 !important; 
+    display: flex !important; 
+    justify-content: center !important; 
+    align-items: center !important; 
+}
+.p-dialog .p-dialog-header .p-dialog-header-icon:hover { background-color: #dc2626 !important; transform: scale(1.1); }
+.p-dialog .p-dialog-title { font-size: 1.5rem !important; font-weight: 900 !important; color: #0f172a !important; }
+
+/* LISTA DE ROLES EN MODAL */
+.roles-list { display: flex; flex-direction: column; gap: 10px; }
+.role-list-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f8fafc;
+    padding: 0.8rem 1.2rem;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+}
+/* =========================================
+   FOOTER DEL SIDEBAR (Ir a Proyectos)
+========================================= */
+.sidebar-footer {
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.05); /* Línea separadora muy sutil */
+    margin-top: 1rem;
+}
+
+.exit-item {
+    color: #94a3b8;
+}
+
+.exit-item:hover {
+    color: white;
+    background: rgba(239, 68, 68, 0.1); /* Fondo ligeramente rojizo al pasar el mouse */
+    border-right: none; /* Quitamos la barra naranja si la tuviera */
+}
+
+.exit-item i {
+    color: #f97316; /* Flecha naranja para que destaque */
+}

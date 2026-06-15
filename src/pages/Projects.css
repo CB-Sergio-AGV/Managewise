@@ -1,0 +1,95 @@
+/* =========================================
+   CONTENEDOR PRINCIPAL
+========================================= */
+.projects-wrapper { 
+    width: 100vw; 
+    min-height: 100vh; 
+    background-color: #f1f5f9; 
+    display: flex; 
+    flex-direction: column; 
+    overflow-x: hidden;
+}
+
+/* Navbar superior */
+.projects-navbar {
+    background-color: #0f172a; height: 70px; display: flex; justify-content: space-between;
+    align-items: center; padding: 0 3rem; box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+.brand-logo { font-size: 1.8rem; font-weight: 900; color: #f97316; letter-spacing: -1px; }
+.nav-right { display: flex; align-items: center; gap: 2rem; }
+
+.plan-badge-container { cursor: pointer; transition: transform 0.2s; }
+.plan-badge-container:hover { transform: scale(1.05); }
+.plan-tag { padding: 0.5rem 1rem !important; border-radius: 8px !important; font-weight: 800 !important; }
+
+.user-nav-profile { display: flex; align-items: center; gap: 15px; cursor: pointer; padding: 5px 10px; border-radius: 30px; transition: background 0.3s; }
+.user-nav-profile:hover { background-color: rgba(255,255,255,0.05); }
+.user-greeting { color: white; font-weight: 600; font-size: 1rem; }
+.nav-avatar { background-color: #f97316; color: white; font-weight: bold; }
+
+/* Contenido Principal */
+.projects-main { max-width: 1200px; margin: 0 auto; width: 100%; padding: 4rem 2rem; flex: 1; }
+.projects-header { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 3rem; }
+.projects-header h1 { font-size: 3rem; color: #0f172a; font-weight: 900; margin: 0; }
+.projects-header p { font-size: 1.2rem; color: #64748b; margin-top: 10px; }
+
+/* Grid y Tarjetas */
+.projects-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 2rem; }
+
+.project-card {
+    background: white; border-radius: 16px; padding: 1.8rem; border: 1px solid #cbd5e1;
+    cursor: pointer; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); display: flex; flex-direction: column;
+}
+.project-card:hover { transform: translateY(-5px); border-color: #f97316; box-shadow: 0 15px 30px rgba(249, 115, 22, 0.15); }
+
+.project-card-header { display: flex; align-items: center; gap: 15px; margin-bottom: 1.5rem; }
+.project-icon { font-size: 2rem; color: #0ea5e9; background: #f0f9ff; padding: 12px; border-radius: 12px; }
+.project-card-header h3 { font-size: 1.4rem; color: #0f172a; font-weight: 800; margin: 0; }
+
+.project-card-body { display: flex; flex-direction: column; gap: 10px; margin-bottom: 2rem; }
+.project-role, .project-date { color: #64748b; font-size: 0.95rem; font-weight: 600; display: flex; align-items: center; gap: 8px; }
+
+.project-card-footer {
+    display: flex; justify-content: space-between; align-items: center; margin-top: auto;
+    color: #f97316; font-weight: 800; font-size: 1rem; border-top: 2px dashed #f1f5f9; padding-top: 1.5rem;
+}
+
+/* Tarjeta Vacía (Motivación) */
+.empty-card { 
+    background: rgba(15, 23, 42, 0.02); border: 2px dashed #cbd5e1; 
+    justify-content: center; align-items: center; gap: 1rem; color: #94a3b8;
+}
+.empty-card i { font-size: 3rem; }
+.empty-card span { font-weight: 800; }
+.empty-card:hover { background: white; color: #f97316; }
+
+/* =========================================
+   ESTILOS POP-UP PLANES (MISMO ESTILO DASHBOARD)
+========================================= */
+.pricing-dialog { background: transparent !important; border: none !important; }
+.pricing-dialog .p-dialog-content { padding: 0 !important; border-radius: 24px; overflow: hidden; }
+
+.pricing-popup-container { background-color: #f8fafc; padding: 3rem 2rem; position: relative; border-radius: 24px; }
+.popup-close-btn { position: absolute; top: 20px; right: 20px; cursor: pointer; color: #64748b; font-size: 1.5rem; }
+
+.upgrade-header { text-align: center; margin-bottom: 3rem; }
+.upgrade-header h1 { font-size: 3rem; font-weight: 900; color: #0f172a; margin: 0 0 10px 0; }
+
+.pricing-grid-popup { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; align-items: center; }
+.pricing-card-popup { background: white; border-radius: 20px; padding: 2rem; border: 1px solid #e2e8f0; display: flex; flex-direction: column; height: 100%; transition: 0.3s; }
+.pricing-card-popup:hover { transform: translateY(-10px); box-shadow: 0 10px 25px rgba(0,0,0,0.05); }
+
+.popular-popup { border: 2px solid #8b5cf6 !important; transform: scale(1.05); box-shadow: 0 20px 40px rgba(139, 92, 246, 0.1); }
+.recommended-badge-popup { background: #8b5cf6; color: white; padding: 4px 12px; border-radius: 20px; font-size: 0.7rem; font-weight: 900; position: absolute; top: -12px; left: 50%; transform: translateX(-50%); }
+
+.pricing-header-popup { text-align: center; margin-bottom: 2rem; }
+.pricing-header-popup h3 { font-size: 1.5rem; font-weight: 800; color: #0f172a; margin: 0; }
+.price-popup { display: flex; justify-content: center; align-items: flex-start; color: #0f172a; margin-top: 1rem; }
+.price-popup .amount { font-size: 4rem; font-weight: 900; line-height: 1; }
+
+.pricing-features-popup ul { list-style: none; padding: 0; margin-bottom: 2rem; display: flex; flex-direction: column; gap: 1rem; }
+.pricing-features-popup li { display: flex; align-items: center; gap: 10px; font-weight: 600; color: #334155; }
+.pricing-features-popup li i { color: #22c55e; }
+.pricing-features-popup li.disabled { color: #94a3b8; text-decoration: line-through; }
+
+.p-button-orange { background-color: #f97316 !important; border: none !important; font-weight: 800 !important; }
