@@ -8,7 +8,7 @@ La plataforma centraliza la administración de proyectos, sprints, historias de 
 
 ## 🔗 Demo
 
-🌍 **Sitio web:** https://managewise.netlify.app
+🌍 **Sitio web:** https://managewisev.netlify.app
 
 🔐 **Login demo:**
 👤 Usuario: `sergio`
