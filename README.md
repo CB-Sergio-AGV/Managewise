@@ -1,40 +1,52 @@
-# ManageWise
+# 🚀 ManageWise
 
-Frontend React + Vite preparado para funcionar sin backend. Todas las llamadas `GET`, `POST`, `PUT` y `DELETE` de la app se atienden con una API local en el navegador usando `localStorage`.
+## 🌐 Plataforma de Gestión Ágil de Proyectos
 
-## Ejecutar localmente
+**ManageWise** es una aplicación web desarrollada con **React** en el frontend y diseñada para integrarse con un backend basado en **Spring Boot**, enfocada en la gestión de proyectos ágiles y el seguimiento eficiente de equipos de trabajo.
 
-```bash
-npm install
-npm run dev
-```
+La plataforma centraliza la administración de proyectos, sprints, historias de usuario, miembros, reuniones y reportes, permitiendo una mejor organización y colaboración dentro de los equipos de desarrollo.
 
-Puedes iniciar sesion con cualquier usuario y contrasena. Si quieres ver data demo desde el primer login:
+## 🔗 Demo
 
-- Usuario: `sergio`
-- Contrasena: `123456`
+🌍 **Sitio web:** https://managewise.netlify.app
 
-## Data local
+🔐 **Login demo:**
+👤 Usuario: `sergio`
+🔑 Contraseña: `123456`
 
-La API local vive en `src/services/localApi.js` y se instala desde `src/main.jsx`.
+## 🛠️ Tecnologías Utilizadas
 
-- No necesita backend.
-- Persiste cambios en `localStorage`.
-- Incluye proyectos, sprints, historias, miembros, roles, reuniones, grabaciones, reportes y actividad demo.
-- Si quieres resetear los datos, borra la clave `managewise_local_api_v1` del `localStorage` del navegador.
+* ⚛️ **React** + Vite
+* ☕ **Spring Boot** (arquitectura backend)
+* 🐘 **PostgreSQL**
+* 🔗 **REST API**
+* 🧩 **Git & GitHub**
 
-## Netlify
+## ✨ Características Principales
 
-El proyecto ya incluye `netlify.toml`.
+* 📋 Gestión de proyectos ágiles
+* 🏃 Administración de sprints
+* 📝 Gestión de historias de usuario
+* 👥 Control de equipos y miembros
+* 📅 Organización de reuniones
+* 📊 Seguimiento de actividades y avances
+* 📈 Generación de métricas para la toma de decisiones
 
-Configuracion recomendada:
+## 🔄 Estado Actual
 
-- Build command: `npm run build`
-- Publish directory: `dist`
-- Node version: `22`
+Actualmente la plataforma cuenta con una base funcional sólida para la gestión de proyectos ágiles. La lógica de negocio y los principales módulos se encuentran implementados y adaptados a entornos de trabajo colaborativo.
 
-Para desplegar desde GitHub, conecta el repo en Netlify y usa la configuracion anterior. No hace falta crear variables de entorno, pero si quieres declararla manualmente puedes usar:
+Próximamente se contempla la incorporación de:
 
-```bash
-VITE_API_BASE_URL=/local-api
-```
+* 🤖 Asistentes impulsados por Inteligencia Artificial
+* 📄 Exportación y descarga avanzada de reportes
+* 📈 Analítica y métricas inteligentes
+* ⚡ Automatización de procesos de gestión
+
+## 🎯 Objetivo
+
+Facilitar la planificación, organización y seguimiento de proyectos ágiles mediante una plataforma moderna, intuitiva y escalable que ayude a los equipos a mejorar su productividad y colaboración.
+
+---
+
+**ManageWise** impulsa la transformación digital de la gestión de proyectos, combinando metodologías ágiles, tecnología moderna y una arquitectura preparada para futuras capacidades de Inteligencia Artificial.
